@@ -50,7 +50,9 @@ function render(variables = {}) {
   }</h1>
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
-          <ul class="${variables.socialMediaPosition}">
+          <ul class="${
+            variables.socialMediaPosition
+          }" style="background-color:${variables.colorbtn}">
             <li><a href="https://twitter.com/${variables.twitter}">
             <i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${variables.github}">
@@ -86,7 +88,8 @@ window.onload = function() {
     lastName: null,
     role: null,
     country: null,
-    city: null
+    city: null,
+    colorbtn: null
   };
 
   render(window.variables); // render the card for the first time
